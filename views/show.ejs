@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<div>
+    <%= student.name %>
+</div>
+<div>
+    <%= student.id %>
+</div>
+<div>
+    <%= student.branch %>
+</div>
+<div>
+    <%= student.cpi %>
+</div>
+<a href="/students/<%= student._id %>/edit">EDIT</a>
+<form action="/students/<%= student._id %>?_method=DELETE" method="POST">
+    <button>DELETE</button>
+</form>
+    <% include ./partials/footer %>

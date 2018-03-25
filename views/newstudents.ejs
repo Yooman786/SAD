@@ -1,0 +1,17 @@
+<% include ./partials/header %>
+<div>
+    NEW STUDENT ENTRY
+</div>
+<form action="/students" method="POST">
+    <input type="text" name="student[name]" placeholder="NAME">
+    <input type="number" name="student[id]" placeholder="ID">
+    <input type="number" step=0.01 name="student[cpi]" max="10" placeholder="CPI">
+    <br>
+    <input type="radio" name="student[branch]" placeholder="Branch" value="IT">IT<br>
+    <input type="radio" name="student[branch]" placeholder="Branch" value="CSE">CSE<br>
+    <input type="radio" name="student[branch]" placeholder="Branch" value="EXTC">EXTC<br>
+    <input type="radio" name="student[branch]" placeholder="Branch" value="MECH">MECH<br>
+    <input type="submit">
+
+</form>
+<% include ./partials/footer %>
