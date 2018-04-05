@@ -1,0 +1,11 @@
+<% include ./partials/header %>
+
+<% students.forEach(function(student){ %>
+    <div>
+        <h2><%= student.name %></h2>
+        <h2><%= student.id %></h2>
+        <a href="/students/<%= student._id %>">Read more about student</a>
+    </div>
+<% }) %> 
+
+<% include ./partials/footer %>

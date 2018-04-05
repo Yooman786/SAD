@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Company view page</title>
+    </head>
+    <body>
+        <div>
+            <a href="/">HOME</a>
+            <a href="/companies/newcompanies">Register new company</a>
+        </div>
+        <div>
+     Company DETAILS
+</div>
+
+<div>
+    <%= company.name %>
+</div>
+
+<div>
+    <%= company.branch %>
+</div>
+<div>
+    <%= company.cpi %>
+</div>
+<a href="/companies/<%= company._id %>/edit">EDIT</a>
+<form action="/companies/<%= company._id %>?_method=DELETE" method="POST">
+    <button>DELETE</button>
+</form>
+    <% include ./partials/footer %>

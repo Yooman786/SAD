@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Company view page</title>
+    </head>
+    <body>
+        <div>
+            <a href="/">HOME</a>
+            <a href="/companies/newcompanies">Register new company</a>
+        </div>
+        <div>
+    NEW Company ENTRY
+</div>
+
+<% companies.forEach(function(company){ %>
+    <div>
+        <h2><%= company.name %></h2>
+        <a href="/companies/<%= company._id %>">Read more about company</a>
+    </div>
+<% }) %> 
+
+<% include ./partials/footer %>
